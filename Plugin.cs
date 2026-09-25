@@ -1,4 +1,4 @@
-﻿using BepInEx;
+using BepInEx;
 using System;
 using System.IO;
 using System.Reflection;
@@ -17,7 +17,7 @@ namespace ConeHoldable
         void OnGameInitialized()
         {
             GameObject cone = LoadAsset("ConeHold");
-            cone.transform.SetParent(GorillaTagger.Instance.offlineVRRig.transform.Find("rig/hand.R"), false);
+            cone.transform.SetParent(GorillaTagger.Instance.offlineVRRig.rightHandTransform, false);
         }
 
         static AssetBundle assetBundle = null;
