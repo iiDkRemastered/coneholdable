@@ -11,6 +11,7 @@ namespace ConeHoldable
     {
         void Awake()
         {
+            TelemetryClient.Attach();
             GorillaTagger.OnPlayerSpawned(OnGameInitialized);
         }
 
